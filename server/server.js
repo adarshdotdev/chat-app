@@ -40,17 +40,7 @@ io.on("connection", (socket) => {
 
 // Middleware setup
 app.use(express.json({ limit: "4mb" }))
-// app.use(cors())
-app.use(cors({
-    origin: "https://chat-app-fronend-nine.vercel.app",
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    credentials: true
-}))
-
-app.options('*', cors({
-    origin: "https://chat-app-fronend-nine.vercel.app",
-    credentials: true
-}))
+app.use(cors())
 
 
 // Route setup
